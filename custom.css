@@ -28,6 +28,50 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/* Custom styles for team member images */
+.team-member-img {
+    width: 100%; /* Make image fill its container */
+    height: 250px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Crop image to cover the area */
+    object-position: center top; /* Focus on the face/upper body */
+}
+
+/* Adjust social icons for team members */
+.team-social-links a i {
+    font-size: 1.2rem; /* Slightly larger icons */
+}
+
+/* Ensure consistent image sizing for news/project cards */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent card image display */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    transition: transform 0.3s ease; /* Added transition for image hover effect */
+}
+
+/* Image hover effect for cards */
+.card:hover .card-img-top {
+    transform: scale(1.03); /* Slightly zoom in image on card hover */
+}
+
+/* Text truncation for consistent card heights */
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit text to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 /* Adjust container padding for smaller screens */
 @media (max-width: 991.98px) {
     .container-xl {
@@ -119,12 +163,6 @@ footer .list-unstyled a:hover {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
 }
 
-/* Ensure consistent image sizing for news cards */
-.card-img-top {
-    width: 100%;
-    height: 200px; /* Fixed height for consistent card image display */
-    object-fit: cover; /* Ensure images cover the area without distortion */
-}
 
 /* Adjustments for the "What We Do" icons section on smaller screens */
 @media (max-width: 767.98px) {
