@@ -1,0 +1,7 @@
+/* custom.css */
+.hero-section {
+    background-image: url('https://s3-alpha-sig.figma.com/img/5b1a/0ea9/c77cb6ba2e61b71029c2be2dc5b725b1?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=tK9aDlD-f5PCwF68kMlkfU45c5VpdhDMtlOtM8yN0f4jyR1evsr7Rc29R-5SXKLrjN1VYE0IP6XxjV9aRZ95lVMWxQqJEMILPnTvBp3h6tA7A~wYc55PDGWUzs~aTnzKXaBXnB3TDpDxp-LHdpfGtBNJTtjEpDI2a0Ne-bU7bdjvHDalylFw5y0bezrj-jEYv~qtEUzjCwMnMnhKu7SEDyt8DexmrLHItS6iW4DEDcmdsLVSPG8vxXXkuwqaSconPpvZgLOSa6SlKGWGv7oZxIvW81c3eFqzIXsJvwVLIDqRspqu9C9XTgtxBcxOfG2bjxl7YKaqK~4VX0G8LLgyxg__');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
