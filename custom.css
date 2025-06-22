@@ -1,7 +1,180 @@
 /* custom.css */
+html {
+    scroll-behavior: smooth; /* Added for smoother scrolling */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Example: Ensure a readable font-family */
+    line-height: 1.6;
+    color: #333;
+}
+
 .hero-section {
-    background-image: url('https://s3-alpha-sig.figma.com/img/5b1a/0ea9/c77cb6ba2e61b71029c2be2dc5b725b1?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=tK9aDlD-f5PCwF68kMlkfU45c5VpdhDMtlOtM8yN0f4jyR1evsr7Rc29R-5SXKLrjN1VYE0IP6XxjV9aRZ95lVMWxQqJEMILPnTvBp3h6tA7A~wYc55PDGWUzs~aTnzKXaBXnB3TDpDxp-LHdpfGtBNJTtjEpDI2a0Ne-bU7bdjvHDalylFw5y0bezrj-jEYv~qtEUzjCwMnMnhKu7SEDyt8DexmrLHItS6iW4DEDcmdsLVSPG8vxXXkuwqaSconPpvZgLOSa6SlKGWGv7oZxIvW81c3eFqzIXsJvwVLIDqRspqu9C9XTgtxBcxOfG2bjxl7YKaqK~4VX0G8LLgyxg__');
+    background-image: url('https://picsum.photos/1920/1080?nature'); /* Replaced expired URL with a new nature-themed placeholder image */
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    position: relative;
+}
+
+/* Added text-shadow for better readability of hero section heading */
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* General button and nav link transitions for smoother hover effects */
+.btn,
+.nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Adjust container padding for smaller screens */
+@media (max-width: 991.98px) {
+    .container-xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Adjusted padding for sections on smaller screens for better mobile layout */
+    section.py-4.py-lg-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Adjust display for hero section content on smaller screens */
+    .hero-section .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .d-flex.flex-wrap.gap-2 {
+        justify-content: center;
+    }
+
+    /* Ensure images in grid layouts are responsive */
+    .row.g-5 .col-lg-6 img,
+    .row.g-4 .col-md-4 .card img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Adjust padding for card overlays on small screens */
+    .card .card-img-overlay {
+        padding: 1rem !important;
+    }
+
+    /* Center text for elements that are left-aligned on desktop */
+    .text-center-sm-down {
+        text-align: center !important;
+    }
+
+    /* Adjust display-5 headings for mobile */
+    .display-5 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem !important; /* Added for consistent spacing */
+    }
+}
+
+/* Specific adjustments for sections with fixed navbar padding */
+section[style*="padding-top: 8rem"] {
+    padding-top: 8rem !important;
+}
+
+
+/* Footer link styling */
+footer .list-unstyled a {
+    transition: color 0.3s ease;
+}
+
+footer .list-unstyled a:hover {
+    color: #fff !important;
+}
+
+/* Dark mode adjustments (if needed beyond Bootstrap's data-bs-theme) */
+[data-bs-theme="dark"] body {
+    color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .text-body-secondary {
+    color: #adb5bd !important;
+}
+
+[data-bs-theme="dark"] .bg-body-tertiary {
+    background-color: #212529 !important; /* Darker background for tertiary sections */
+}
+
+[data-bs-theme="dark"] .card.text-bg-dark .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Darker overlay for dark mode cards */
+}
+
+[data-bs-theme="dark"] .bg-success-subtle {
+    background-color: rgba(25, 135, 84, 0.2) !important; /* Adjust subtle background for dark mode */
+}
+
+[data-bs-theme="dark"] .text-success-emphasis {
+    color: #198754 !important; /* Ensure good contrast for text */
+}
+
+/* Styling for the mission video play button for better visibility */
+.position-relative .btn.rounded-circle {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}
+
+/* Ensure consistent image sizing for news cards */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent card image display */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+/* Adjustments for the "What We Do" icons section on smaller screens */
+@media (max-width: 767.98px) {
+    .border-start {
+        border-left: none !important; /* Remove border on small screens */
+        padding-left: 0 !important; /* Remove padding */
+    }
+
+    .border-start::before {
+        content: none; /* Remove pseudo-element for vertical line */
+    }
+}
+
+
+/* Adjustments for the bottom-0, start-0, end-0 element in hero section on small screens */
+@media (max-width: 767.98px) {
+    .hero-section .d-lg-flex { /* Targeting the specific element with d-lg-flex */
+        position: static !important; /* Remove absolute positioning */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center !important; /* Center items */
+        padding-top: 1rem; /* Add some padding */
+        padding-bottom: 1rem !important;
+        margin-top: 2rem; /* Add margin to separate from content above */
+        background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+        width: 100%; /* Full width */
+    }
+
+    .hero-section .d-lg-flex .w-lg-50 { /* Targeting the separator line */
+        width: 80% !important; /* Adjust width of the separator line */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Supporter logos hover effect */
+.opacity-75 {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.opacity-75:hover {
+    opacity: 1 !important; /* Full opacity on hover */
+}
+
+/* Card subtle shadow */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
