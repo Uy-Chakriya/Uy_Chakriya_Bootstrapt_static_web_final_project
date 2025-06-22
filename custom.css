@@ -1,63 +1,60 @@
 /* custom.css */
 html {
-    scroll-behavior: smooth; /* Added for smoother scrolling */
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif; /* Example: Ensure a readable font-family */
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
 .hero-section {
-    background-image: url('https://picsum.photos/1920/1080?nature'); /* Replaced expired URL with a new nature-themed placeholder image */
+    /* Re-added specific background image for full-screen effect */
+    background-image: url('https://loupedin.blog/wp-content/uploads/2022/03/220413-environment-protection.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     position: relative;
+    /* Added a semi-transparent dark overlay for better text readability */
+    background-color: rgba(0, 0, 0, 0.5); /* This color will act as an overlay */
+    background-blend-mode: overlay; /* Blends the background color with the image */
 }
 
-/* Added text-shadow for better readability of hero section heading */
 .hero-section h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* General button and nav link transitions for smoother hover effects */
 .btn,
 .nav-link {
     transition: all 0.3s ease-in-out;
 }
 
-/* Custom styles for team member images */
 .team-member-img {
-    width: 100%; /* Make image fill its container */
-    height: 250px; /* Set a fixed height for uniformity */
-    object-fit: cover; /* Crop image to cover the area */
-    object-position: center top; /* Focus on the face/upper body */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
 }
 
-/* Adjust social icons for team members */
 .team-social-links a i {
-    font-size: 1.2rem; /* Slightly larger icons */
+    font-size: 1.2rem;
 }
 
-/* Ensure consistent image sizing for news/project cards */
 .card-img-top {
     width: 100%;
-    height: 200px; /* Fixed height for consistent card image display */
-    object-fit: cover; /* Ensure images cover the area without distortion */
-    transition: transform 0.3s ease; /* Added transition for image hover effect */
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Image hover effect for cards */
 .card:hover .card-img-top {
-    transform: scale(1.03); /* Slightly zoom in image on card hover */
+    transform: scale(1.03);
 }
 
-/* Text truncation for consistent card heights */
 .card-title {
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -65,27 +62,23 @@ body {
 
 .card-text {
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Limit text to 3 lines */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-
-/* Adjust container padding for smaller screens */
 @media (max-width: 991.98px) {
     .container-xl {
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
-    /* Adjusted padding for sections on smaller screens for better mobile layout */
     section.py-4.py-lg-5 {
         padding-top: 2rem !important;
         padding-bottom: 2rem !important;
     }
 
-    /* Adjust display for hero section content on smaller screens */
     .hero-section .display-3 {
         font-size: 2.5rem;
     }
@@ -94,37 +87,30 @@ body {
         justify-content: center;
     }
 
-    /* Ensure images in grid layouts are responsive */
     .row.g-5 .col-lg-6 img,
     .row.g-4 .col-md-4 .card img {
         height: auto;
         max-width: 100%;
     }
 
-    /* Adjust padding for card overlays on small screens */
     .card .card-img-overlay {
         padding: 1rem !important;
     }
 
-    /* Center text for elements that are left-aligned on desktop */
     .text-center-sm-down {
         text-align: center !important;
     }
 
-    /* Adjust display-5 headings for mobile */
     .display-5 {
         font-size: 2.5rem;
-        margin-bottom: 1.5rem !important; /* Added for consistent spacing */
+        margin-bottom: 1.5rem !important;
     }
 }
 
-/* Specific adjustments for sections with fixed navbar padding */
 section[style*="padding-top: 8rem"] {
     padding-top: 8rem !important;
 }
 
-
-/* Footer link styling */
 footer .list-unstyled a {
     transition: color 0.3s ease;
 }
@@ -133,7 +119,6 @@ footer .list-unstyled a:hover {
     color: #fff !important;
 }
 
-/* Dark mode adjustments (if needed beyond Bootstrap's data-bs-theme) */
 [data-bs-theme="dark"] body {
     color: #f8f9fa;
 }
@@ -143,76 +128,69 @@ footer .list-unstyled a:hover {
 }
 
 [data-bs-theme="dark"] .bg-body-tertiary {
-    background-color: #212529 !important; /* Darker background for tertiary sections */
+    background-color: #212529 !important;
 }
 
 [data-bs-theme="dark"] .card.text-bg-dark .card-img-overlay {
-    background-color: rgba(0, 0, 0, 0.7) !important; /* Darker overlay for dark mode cards */
+    background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 [data-bs-theme="dark"] .bg-success-subtle {
-    background-color: rgba(25, 135, 84, 0.2) !important; /* Adjust subtle background for dark mode */
+    background-color: rgba(25, 135, 84, 0.2) !important;
 }
 
 [data-bs-theme="dark"] .text-success-emphasis {
-    color: #198754 !important; /* Ensure good contrast for text */
+    color: #198754 !important;
 }
 
-/* Styling for the mission video play button for better visibility */
 .position-relative .btn.rounded-circle {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Adjustments for the "What We Do" icons section on smaller screens */
 @media (max-width: 767.98px) {
     .border-start {
-        border-left: none !important; /* Remove border on small screens */
-        padding-left: 0 !important; /* Remove padding */
+        border-left: none !important;
+        padding-left: 0 !important;
     }
 
     .border-start::before {
-        content: none; /* Remove pseudo-element for vertical line */
+        content: none;
     }
 }
 
-
-/* Adjustments for the bottom-0, start-0, end-0 element in hero section on small screens */
 @media (max-width: 767.98px) {
-    .hero-section .d-lg-flex { /* Targeting the specific element with d-lg-flex */
-        position: static !important; /* Remove absolute positioning */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center !important; /* Center items */
-        padding-top: 1rem; /* Add some padding */
+    .hero-section .d-lg-flex {
+        position: static !important;
+        flex-direction: column;
+        align-items: center !important;
+        padding-top: 1rem;
         padding-bottom: 1rem !important;
-        margin-top: 2rem; /* Add margin to separate from content above */
-        background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-        width: 100%; /* Full width */
+        margin-top: 2rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
     }
 
-    .hero-section .d-lg-flex .w-lg-50 { /* Targeting the separator line */
-        width: 80% !important; /* Adjust width of the separator line */
+    .hero-section .d-lg-flex .w-lg-50 {
+        width: 80% !important;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
 }
 
-/* Supporter logos hover effect */
 .opacity-75 {
     transition: opacity 0.3s ease-in-out;
 }
 
 .opacity-75:hover {
-    opacity: 1 !important; /* Full opacity on hover */
+    opacity: 1 !important;
 }
 
-/* Card subtle shadow */
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
